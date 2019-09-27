@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 27, 2019 at 12:30 PM
+-- Generation Time: Sep 27, 2019 at 01:25 PM
 -- Server version: 10.3.16-MariaDB
 -- PHP Version: 7.3.7
 
@@ -41,7 +41,10 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`id`, `userName`, `password`, `status`) VALUES
 (1, 'dexter', '123123', 'admin'),
-(2, 'mistereo', '12345', 'sade');
+(2, 'mistereo', '12345', 'sade'),
+(3, 'max', '4297f44b13955235245b2497399d7a93', 'admin'),
+(4, 'rex', '4297f44b13955235245b2497399d7a93', 'admin'),
+(5, 'cavid', '05eec14d207a986a4b28d8617c925c69', 'admin');
 
 -- --------------------------------------------------------
 
@@ -67,7 +70,8 @@ INSERT INTO `post` (`id`, `title`, `description`, `image`, `category`, `date`, `
 (30, 'Cargo', 'Italiya mebeli', '13.jpg', 'Horror', '2019-09-16', 'Active'),
 (31, 'Spiderman', 'Welcome to home', '1081.jpg', 'Comedy', '2019-02-12', 'Active'),
 (32, 'simba', 'New dssvsdfd', '1.jpg', 'Comedy', '1212-12-12', 'Active'),
-(34, 'Scream', 'the horror film', '2.jpg', 'Horror', '1223-02-21', 'Active');
+(34, 'Scream', 'the horror film', '2.jpg', 'Horror', '1223-02-21', 'Active'),
+(36, ' alert(\"sdsdsd\") ', ' alert(\"sdsdsd\") ', 'variant_A.jpg', 'Comedy', '0012-12-12', 'Active');
 
 --
 -- Indexes for dumped tables
@@ -93,13 +97,13 @@ ALTER TABLE `post`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `post`
 --
 ALTER TABLE `post`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

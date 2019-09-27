@@ -5,10 +5,18 @@ class AdminModel extends CI_Model{
 
     public function checkUser($username,$password)
     {
-       return $this->db->where('userName',$username)->where('password',$password)->get('admin')->row_array();
+       return $this->db->where('userName',$username)->where('password',md5($password))->get('admin')->row_array();
     }
 
+    public function getAllUsers()
+    {
+      return $this->db->order_by('id','DESC')->get('admin')->result_array();
+    }
 
+    public function addUser($data)
+    {
+        $this->db->insert('admin',$data);
+    }
     public function insertNews($data){
         $this->db->insert('post',$data);
     }

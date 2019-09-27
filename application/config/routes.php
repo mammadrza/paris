@@ -74,6 +74,9 @@ $route['delete/(.*)'] = 'Admin/deletePost/$1';
 $route['update/(.*)'] = 'Admin/update/$1';
 $route['updateAct/(.*)'] = 'Admin/updateAct/$1';
 $route['checkUser'] = 'Admin/checkUser';
+$route['userRegister'] = 'Admin/userRegister';
+$route['addUserAct'] = 'Admin/addUserAct';
+$route['userList'] = 'Admin/userList';
 $route['logOut'] = 'Admin/logOut';
 
 

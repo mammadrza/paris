@@ -15,6 +15,42 @@ class Admin extends CI_Controller{
        $this->load->view('admin/login');
     }
 
+    public function userRegister()
+    {
+        $this->load->view('admin/registerUser');
+    }
+
+    public function userList()
+    {
+        $data['allUsers'] = $this->AdminModel->getAllUsers();
+        $this->load->view('admin/userList',$data);
+    }
+
+    public function addUserAct()
+    {
+        $username = $this->input->post('username');
+        $password = $this->input->post('password');
+        $status = $this->input->post('status');
+
+        if(!empty($username) && !empty($password) && !empty($status)){
+            $data = [
+                'userName' => $username,
+                'password' => md5($password),
+                'status'   => $status,
+            ];
+            $this->AdminModel->addUser($data);
+            $this->session->set_flashdata('success','Ugurlu emeliyyat');
+            redirect(base_url('userList'));
+
+
+        }else{
+            $this->session->set_flashdata('err','Bosluq buraxmayin');
+            redirect(base_url('userRegister'));
+        }
+
+
+    }
+
     public function checkUser()
     {
        $username = $_POST['userName'];

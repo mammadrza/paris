@@ -22,10 +22,10 @@
                 <div class="dropdown-menu dropdown-menu-small">
                     <a class="dropdown-item" href="user-profile-lite.html">
                         <i class="material-icons">&#xE7FD;</i> Profile</a>
-                    <a class="dropdown-item" href="components-blog-posts.html">
-                        <i class="material-icons">vertical_split</i> Admin list</a>
-                    <a class="dropdown-item" href="add-new-post.html">
-                        <i class="material-icons">note_add</i> Add admin</a>
+                    <a class="dropdown-item" href="<?php echo base_url('userList') ?>">
+                        <i class="material-icons">vertical_split</i> User list</a>
+                    <a class="dropdown-item" href="<?php echo base_url('userRegister') ?>">
+                        <i class="material-icons">note_add</i> Add user</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item text-danger" href="<?php echo base_url('logOut') ?>">
                         <i class="material-icons text-danger">&#xE879;</i> Logout </a>
